@@ -54,7 +54,7 @@ function generateHTML(data) {
                         }
                     },
                     animation: {
-                        duration: 500,
+                        duration: 1000,
                         interpolateFrames: 10,
                         exitDuration: 0.5
                     },
