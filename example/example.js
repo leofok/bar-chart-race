@@ -10,7 +10,7 @@ function generateHTML(data) {
     <meta charset="UTF-8">
     <title>手機品牌銷量排行</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="../../lib/barChartRace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@v1.0.6/lib/barChartRace.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .chart-container {
