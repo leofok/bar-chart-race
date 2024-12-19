@@ -1,0 +1,25 @@
+{
+  "name": "bar-chart-race",
+  "version": "1.0.0",
+  "description": "Dynamic bar chart race visualization library",
+  "main": "lib/barChartRace.js",
+  "scripts": {
+    "start": "node example/example.js"
+  },
+  "keywords": [
+    "d3",
+    "visualization",
+    "bar-chart",
+    "race",
+    "animation"
+  ],
+  "author": "Leo Fok",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^7.8.5",
+    "jsdom": "^24.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+} 
