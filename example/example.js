@@ -10,7 +10,7 @@ function generateHTML(data) {
     <meta charset="UTF-8">
     <title>手機品牌銷量排行</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@v1.0.0/lib/barChartRace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@1.0.0/lib/barChartRace.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .chart-container {
@@ -22,7 +22,6 @@ function generateHTML(data) {
 <body>
     <div id="chart" class="chart-container"></div>
     <script>
-        // 確保所有腳本都已加載
         function initChart() {
             if (typeof BarChartRace === "undefined" || typeof d3 === "undefined") {
                 setTimeout(initChart, 100);
@@ -34,36 +33,15 @@ function generateHTML(data) {
             const chart = new BarChartRace("chart", {
                 data: data,
                 options: {
-                    width: 1200,      // 設置圖表寬度
-                    height: 500,      // 設置圖表高度
+                    width: 1000,
+                    height: 400,
                     plugins: {
                         title: {
                             text: "手機品牌銷量排行"
                         }
                     },
-                    scales: {
-                        x: {
-                            title: {
-                                text: data.xAxisLabel
-                            }
-                        },
-                        y: {
-                            title: {
-                                text: data.yAxisLabel
-                            }
-                        }
-                    },
                     animation: {
-                        duration: 1000,
-                        interpolateFrames: 10,
-                        exitDuration: 0.5
-                    },
-                    container: {
-                        showFrame: true,  // 設置是否顯示外框
-                        padding: 20,
-                        background: "white",
-                        borderRadius: 8,
-                        shadow: "0 2px 4px rgba(0,0,0,0.1)"
+                        duration: 2000
                     }
                 }
             });
@@ -71,7 +49,6 @@ function generateHTML(data) {
             chart.play();
         }
 
-        // 在 DOMContentLoaded 後初始化
         window.addEventListener("DOMContentLoaded", initChart);
     </script>
 </body>

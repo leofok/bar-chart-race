@@ -1,25 +1,28 @@
 {
   "name": "bar-chart-race",
   "version": "1.0.0",
-  "description": "Dynamic bar chart race visualization library",
+  "description": "A bar chart race visualization library",
   "main": "lib/barChartRace.js",
   "scripts": {
-    "start": "node example/example.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leofok/bar-chart-race.git"
   },
   "keywords": [
     "d3",
     "visualization",
     "bar-chart",
-    "race",
-    "animation"
+    "race"
   ],
   "author": "Leo Fok",
   "license": "MIT",
-  "dependencies": {
-    "d3": "^7.8.5",
-    "jsdom": "^24.0.0"
+  "bugs": {
+    "url": "https://github.com/leofok/bar-chart-race/issues"
   },
-  "devDependencies": {
-    "eslint": "^8.57.0"
+  "homepage": "https://github.com/leofok/bar-chart-race#readme",
+  "dependencies": {
+    "d3": "^7.0.0"
   }
 } 
