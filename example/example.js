@@ -10,7 +10,7 @@ function generateHTML(data) {
     <meta charset="UTF-8">
     <title>手機品牌銷量排行</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="../../lib/barChartRace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@main/lib/barChartRace.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .chart-container {
@@ -27,7 +27,13 @@ function generateHTML(data) {
 <body>
     <div id="chart" class="chart-container"></div>
     <script>
-        window.addEventListener("DOMContentLoaded", function() {
+        // 確保腳本已加載
+        function checkDependencies() {
+            if (typeof BarChartRace === 'undefined' || typeof d3 === 'undefined') {
+                setTimeout(checkDependencies, 100);
+                return;
+            }
+
             const data = ${JSON.stringify(data, null, 2)};
             
             const chart = new BarChartRace("chart", {
@@ -51,15 +57,17 @@ function generateHTML(data) {
                         }
                     },
                     animation: {
-                        duration: 500,     // 動畫持續時間（毫秒）
-                        interpolateFrames: 10,  // 幀之間的插值數量
+                        duration: 500,
+                        interpolateFrames: 10,
                         exitDuration: 0.5
                     }
                 }
             });
 
             chart.play();
-        });
+        }
+
+        window.addEventListener("DOMContentLoaded", checkDependencies);
     </script>
 </body>
 </html>`;
@@ -95,7 +103,7 @@ function processCSV() {
     }
   }
 
-  // 為每個品牌創建數據集
+  // 為每個品牌建數據集
   brands.forEach(brand => {
     data.datasets.push({
       label: brand,
