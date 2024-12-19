@@ -4,6 +4,7 @@
   "description": "A bar chart race visualization library",
   "main": "lib/barChartRace.js",
   "scripts": {
+    "start": "node example/example.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

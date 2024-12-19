@@ -65,7 +65,7 @@ function generateHTML(data) {
 
 // 讀取並處理 CSV 數據
 function processCSV() {
-  const csvData = fs.readFileSync("data/data.csv", "utf-8");
+  const csvData = fs.readFileSync(path.join(__dirname, "data", "data.csv"), "utf-8");
   const lines = csvData.split("\n");
   const headers = lines[0].split(",");
 
