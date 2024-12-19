@@ -10,7 +10,7 @@ function generateHTML(data) {
     <meta charset="UTF-8">
     <title>手機品牌銷量排行</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@main/lib/barChartRace.js"></script>
+    <script src="../../lib/barChartRace.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .chart-container {
@@ -27,13 +27,7 @@ function generateHTML(data) {
 <body>
     <div id="chart" class="chart-container"></div>
     <script>
-        // 確保腳本已加載
-        function checkDependencies() {
-            if (typeof BarChartRace === 'undefined' || typeof d3 === 'undefined') {
-                setTimeout(checkDependencies, 100);
-                return;
-            }
-
+        window.addEventListener("DOMContentLoaded", function() {
             const data = ${JSON.stringify(data, null, 2)};
             
             const chart = new BarChartRace("chart", {
@@ -65,9 +59,7 @@ function generateHTML(data) {
             });
 
             chart.play();
-        }
-
-        window.addEventListener("DOMContentLoaded", checkDependencies);
+        });
     </script>
 </body>
 </html>`;
