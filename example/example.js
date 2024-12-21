@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 // 生成 HTML 文件
-function generateHTML(data) { //https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@1.0.0
+function generateHTML(data) {
   const html = `
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@ function generateHTML(data) { //https://cdn.jsdelivr.net/gh/leofok/bar-chart-rac
     <meta charset="UTF-8">
     <title>手機品牌銷量排行</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="../../lib/barChartRace.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/leofok/bar-chart-race@1.0.0/lib/barChartRace.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .chart-container {
