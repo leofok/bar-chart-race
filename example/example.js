@@ -34,7 +34,7 @@ function generateHTML(data) {
                 data: data,
                 options: {
                     width: 1000,
-                    height: 400,
+                    height: 500,
                     plugins: {
                         title: {
                             text: "手機品牌銷量排行"
